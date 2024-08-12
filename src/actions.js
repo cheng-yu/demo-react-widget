@@ -2,7 +2,7 @@
 export const addItem = (item) => {
   let payload = { ...item, id: Date.now() };
   if (item.type === 'image') {
-    payload = { ...payload, src: 'logo192.png', width: 100, height: 100, value: 'This is an Image' };
+    payload = { ...payload, src: 'logo192.png', width: '100px', height: '100px', value: 'This is an Image' };
   } else {
     payload = { ...payload, value: 'This is a Text' };
   }
