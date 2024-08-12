@@ -1,7 +1,7 @@
 // actions.js
 export const addItem = (item) => ({
   type: 'ADD_ITEM',
-  payload: item
+  payload: { ...item, id: Date.now() }
 });
 
 export const updateItem = (itemId, newProps) => ({
