@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDrop } from 'react-dnd';
+import { connect } from 'react-redux';
+import { addItem } from './actions';
 import './MainArea.css';
 
-function Target() {
-  const [items, setItems] = useState([]);
-
+const Target = ({ items, addItem }) => {
   const [{ canDrop, isOver }, drop] = useDrop(() => ({
     accept: ['image', 'text'], // 接受的拖曳類型
     drop: (item) => {
-      setItems([...items, item]);
+      addItem(item);
     },
     collect: (monitor) => ({
       canDrop: monitor.canDrop(),
@@ -18,11 +18,26 @@ function Target() {
 
   return (
     <div ref={drop} className={`target ${canDrop ? 'can-drop' : ''} ${isOver ? 'is-over' : ''}`}>
-      {items.map((item, index) => (
-        <div key={index} className="item">{item.name}</div>
+      {items.map(item => (
+        <div key={item.id}>
+          {item.type === 'image' ? (
+            <img src={item.src} alt={item.name} />
+          ) : (
+            <p>{item.name}</p>
+          )}
+        </div>
       ))}
     </div>
   );
 }
 
-export default Target;
+const mapStateToProps = (state) => ({
+  items: state.items
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  addItem: (item) => dispatch(addItem(item))
+});
+
+export default connect(mapStateToProps,    
+mapDispatchToProps)(Target);
