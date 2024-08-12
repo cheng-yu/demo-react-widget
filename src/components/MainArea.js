@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDrop } from 'react-dnd';
 import { connect } from 'react-redux';
-import { addItem } from './actions';
+import { addItem } from '../actions';
 import './MainArea.css';
 
 const MainArea = ({ items, addItem }) => {
