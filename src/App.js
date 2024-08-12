@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { legacy_createStore as createStore } from 'redux';
 import reducer from './reducer';
 import './App.css';
-import Item from './SidebarItem';
+import Item from './components/SidebarItem';
 import MainArea from './components/MainArea';
 
 const store = createStore(reducer);
