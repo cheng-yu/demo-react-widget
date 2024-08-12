@@ -2,7 +2,7 @@ import React from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import './App.css';
-import Item from './Sidebar';
+import Item from './SidebarItem';
 import Target from './MainArea';
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDrag } from 'react-dnd';
-import './Sidebar.css';
+import './SidebarItem.css';
 
 function Item({ name, type }) {
   const [{ isDragging }, drag] = useDrag(() => ({
