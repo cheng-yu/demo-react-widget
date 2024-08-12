@@ -21,9 +21,9 @@ const Target = ({ items, addItem }) => {
       {items.map(item => (
         <div key={item.id}>
           {item.type === 'image' ? (
-            <img src={item.src} alt={item.name} />
+            <img src={item.src} alt={item.value} width={item.width} height={item.height} />
           ) : (
-            <p>{item.name}</p>
+            <p>{item.value}</p>
           )}
         </div>
       ))}
