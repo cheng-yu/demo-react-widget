@@ -1,0 +1,11 @@
+/* Sidebar.css */
+.item {
+  /* Styles for sidebar items */
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.dragging {
+  opacity: 0.5;
+}

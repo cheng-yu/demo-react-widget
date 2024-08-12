@@ -1,0 +1,13 @@
+/* MainArea.css */
+.target {
+  border: 1px dashed #ccc;
+  height: 300px;
+}
+
+.can-drop {
+  border-color: blue;
+}
+
+.is-over {
+  background-color: lightblue;
+}
