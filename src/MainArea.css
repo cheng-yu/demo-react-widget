@@ -1,7 +1,7 @@
 /* MainArea.css */
 .target {
   border: 1px dashed #ccc;
-  height: 300px;
+  height: 100vh;
 }
 
 .can-drop {
