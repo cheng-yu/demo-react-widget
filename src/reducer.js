@@ -1,6 +1,7 @@
 // reducer.js
 const initialState = {
-  items: []
+  items: [],
+  selectedItem: null
 };
 
 const reducer = (state = initialState, action) => {
@@ -16,6 +17,16 @@ const reducer = (state = initialState, action) => {
         items: state.items.map(item =>
           item.id === action.payload.itemId ? { ...item, ...action.payload.newProps } : item
         )
+      };
+    case 'SELECT_ITEM':
+      return {
+        ...state,
+        selectedItem: state.items.find((item) => item.id === action.payload.itemId) 
+      };
+    case 'UNSELECT_ITEM':
+      return {
+        ...state,
+        selectedItem: null
       };
     default:
       return state;

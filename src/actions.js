@@ -13,6 +13,14 @@ export const addItem = (item) => {
   }
 };
 
+export const selectItem = (itemId) => ({
+  type: 'SELECT_ITEM',
+  payload: { itemId }
+});
+
+export const unselectItem = () => ({
+  type: 'UNSELECT_ITEM'
+});
 
 export const updateItem = (itemId, newProps) => ({
   type: 'UPDATE_ITEM',
