@@ -6,7 +6,7 @@ import { legacy_createStore as createStore } from 'redux';
 import reducer from './reducer';
 import './App.css';
 import Item from './SidebarItem';
-import Target from './MainArea';
+import MainArea from './MainArea';
 
 const store = createStore(reducer);
 
@@ -20,7 +20,7 @@ function App() {
             <Item name="Text" type="text" />
           </div>
           <div className="main">
-            <Target />
+            <MainArea />
           </div>
         </div>
       </DndProvider>

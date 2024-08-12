@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { addItem } from './actions';
 import './MainArea.css';
 
-const Target = ({ items, addItem }) => {
+const MainArea = ({ items, addItem }) => {
   const [{ canDrop, isOver }, drop] = useDrop(() => ({
     accept: ['image', 'text'], // 接受的拖曳類型
     drop: (item) => {
@@ -40,4 +40,4 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(mapStateToProps,    
-mapDispatchToProps)(Target);
+mapDispatchToProps)(MainArea);
