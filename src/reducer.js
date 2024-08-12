@@ -12,13 +12,13 @@ const reducer = (state = initialState, action) => {
         items: [...state.items, action.payload]
       };
     case 'UPDATE_ITEM':
+      let selectedItem = { ...state.selectedItem, ...action.payload.newProps };
       return {
         ...state,
-        items: state.items.map(item =>
-          item.id === action.payload.itemId ? { ...item, ...action.payload.newProps } : item
-        )
+        items: state.items.map((item) => item.id === action.payload.itemId ? selectedItem : item),
+        selectedItem
       };
-    case 'SELECT_ITEM':
+    case 'SELECT_ITEM':;
       return {
         ...state,
         selectedItem: state.items.find((item) => item.id === action.payload.itemId) 
