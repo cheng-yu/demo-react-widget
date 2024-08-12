@@ -24,7 +24,7 @@ const Sidebar = ({ selectedItem, updateItem }) => {
                 }} />
                 <input type="text" defaultValue={selectedItem.src} onChange={(e) => {
                   // check if the value is a valid URL
-                  if (e.target.value.match(/(http(s?):)?([/|.|\w|\s|-])*\.(?:jpg|gif|png)/g)) {
+                  if (e.target.value.match(/(http(s?):)?([/|.|\w|\s|-])*\.(?:jpeg|jpg|gif|png)/g)) {
                     updateItem(selectedItem.id, { src: e.target.value })
                   }
                 }} />
