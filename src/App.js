@@ -4,9 +4,9 @@ import { HTML5Backend } from 'react-dnd-html5-backend';
 import { Provider } from 'react-redux';
 import { legacy_createStore as createStore } from 'redux';
 import reducer from './reducer';
-import './App.css';
-import Item from './components/SidebarItem';
+import Sidebar from './components/Sidebar';
 import MainArea from './components/MainArea';
+import './App.css';
 
 const store = createStore(reducer);
 
@@ -16,8 +16,7 @@ function App() {
       <DndProvider backend={HTML5Backend}>
         <div className="App">
           <div className="sidebar">
-            <Item name="Image" type="image" />
-            <Item name="Text" type="text" />
+            <Sidebar />
           </div>
           <div className="main">
             <MainArea />
