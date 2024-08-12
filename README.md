@@ -3,6 +3,7 @@ A simple demo site for widget dragging and real-time updating features powered b
 
 ### Run The App
 - `cd {project path}`
+- `npm install`
 - `npm start`
 
 ### Demo Video
